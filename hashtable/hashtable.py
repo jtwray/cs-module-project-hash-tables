@@ -1,3 +1,16 @@
+def my_hashing_func(str):
+    bytes_representation = str.encode()
+
+    sum= 0
+    for byte in bytes_representation:
+        sum += byte
+    return sum
+
+
+    
+
+
+
 class HashTableEntry:
     """
     Linked List hash table key/value pair
