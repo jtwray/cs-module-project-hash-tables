@@ -32,7 +32,7 @@ def print_letters(s):
     counts_dict=letter_counts(s)
     ##sort by value
     counts_list=list(counts_dict.items())
-    counts_list.sort(reverse=True, key = lambda x:x1]) #sort by value in descending order
+    counts_list.sort(reverse=True, key = lambda x:x-1]) #sort by value in descending order
     
 
     #loop through and print them
@@ -93,7 +93,7 @@ for record in records:
     city=record[1]
     name=record[0]
     if city in d:
-        d[city],add(name)
+        d[city].add(name)
         else:
             d[city]=set()
             d[city].add(name)

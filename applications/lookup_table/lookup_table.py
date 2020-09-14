@@ -66,6 +66,9 @@ has_3_in_arr = linear_search(my_arr, 3)
 ​
 # use hash tables anywhere reacquiring info would be too slow
 ​
+
+
+
 # Memoization
 ## Dynamic Programming
 ​
@@ -208,3 +211,61 @@ def get_inverse_root(x):
 print(get_inverse_root(9999))
 ​
 print(get_inverse_root(100000))
+
+
+
+
+'''
+you set it up before hand because you know this operation is expensivec and you dot want to do it more tahn once at a time. 
+hopefully you can have it done already. 
+worst case you can do it only once on demand
+best case its done already and you just return it
+
+create the dict to look up quickly
+define the expensive function
+
+preload the table while you ahve time
+
+write the lookup funciton 
+--include a checkfor 
+    --if already there return
+--include a call to the expensive funciton if not found
+    --run once and never have to again
+-- you might have to run a scale up to double size of storage
+--incorporate some down time for that  
+
+ideal load size of hastable is between 1.2 and 1.4
+
+
+
+hashcache= {}
+
+def expensive_function(thing):
+    return 0(thing**2(log(thing)))
+def build_lookup_table():
+    for thing in all_things_list:
+            hashcache[thing]=expensive_function(thing)
+
+#run it now beofre user gets to application
+#like indexing the tables in a Database
+
+build_lookup_table()
+
+
+
+
+def hashcache_get(thing):
+# check hashcache for each thing first
+    if think in hashcache:
+        return hashcache[thing]
+    else:
+# add it to the hashcache
+        hashcache[thing]=expensive_function(thing)
+        returm hashcache[thing]
+
+
+# on User Click user request
+hashcache_get(event.target.state[thing])
+
+
+'''
